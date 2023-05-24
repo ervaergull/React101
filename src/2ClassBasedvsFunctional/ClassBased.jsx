@@ -11,17 +11,18 @@ class ClassBased extends React.Component {
 
   incrementCount = () => {
     this.setState(prevState => ({
-      count: prevState + 1
+      count: prevState.count + 1
     }))
   }
 
   render() {
-    <div>
-      <p>Current Count</p>{this.state.count}
-      <button onClick={this.incrementCount}>Increment</button>
-    </div>
+    return (
+      <div>
+        <p>Current Count</p>{this.state.count}
+        <button onClick={this.incrementCount}>Increment</button>
+      </div>
+    )
   }
-
 
 }
 

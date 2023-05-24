@@ -5,6 +5,7 @@ const FunctionalTodo = () => {
   const [todo, setTodo] = useState(null)
 
   useEffect(() => {
+    console.log("Fetching data")
     fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then(response => response.json())
       .then(json => setTodo(json))

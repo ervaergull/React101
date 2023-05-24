@@ -3,13 +3,14 @@ import React, { useState, useEffect } from 'react'
 const FunctionalTodoRerender = () => {
 
   const [todo, setTodo] = useState(null)
-  const [pageIndex, setPageIndex] = useState(0)
+  const [pageIndex, setPageIndex] = useState(1)
 
   const increasePageIndex = () => {
     setPageIndex(prevIndex => prevIndex + 1)
   }
 
   const fetchData = () => {
+    console.log("Fetching page" + pageIndex)
     fetch('https://jsonplaceholder.typicode.com/todos/' + pageIndex)
       .then(response => response.json())
       .then(json => setTodo(json))

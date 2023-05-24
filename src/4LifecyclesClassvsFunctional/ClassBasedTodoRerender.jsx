@@ -6,7 +6,7 @@ class ClassBasedTodoRerender extends React.Component {
 
     this.state = {
       todo: null,
-      pageIndex: 0
+      pageIndex: 1
     }
   }
 
@@ -17,6 +17,7 @@ class ClassBasedTodoRerender extends React.Component {
   }
 
   fetchData = () => {
+    console.log("Fetching page" + this.state.pageIndex)
     fetch('https://jsonplaceholder.typicode.com/todos/' + this.state.pageIndex)
       .then(response => response.json())
       .then(json => {

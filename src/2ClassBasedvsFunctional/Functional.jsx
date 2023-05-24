@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 const Functional = () => {
 
-  const [count, setCount] = useState()
+  const [count, setCount] = useState(0)
 
   const incrementCount = () => {
     setCount(prevState => prevState + 1)
